@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy 1st Anniversary</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .envelope {
+            cursor: pointer;
+            display: block;
+            animation: moveVertical 2s ease-in-out infinite;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        @keyframes moveVertical {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .paper {
+            display: none;
+            opacity: 0;
+            background-color: transparent;
+            backdrop-filter: blur(5px);
+            color: #8b0000;
+            font-family: 'Quicksand', sans-serif;
+            padding: 40px;
+            margin: 50px auto;
+            width: 85%;
+            max-width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            line-height: 1.9;
+            font-size: 18px;
+            text-align: justify;
+            position: relative;
+            transition: opacity 1s ease;
+        }
+
+        .paper.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .paper p::first-line {
+            font-family: 'Great Vibes', cursive;
+            font-size: 26px;
+            color: #c2185b;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            .paper {
+                width: 95%;
+                padding: 20px;
+                font-size: 16px;
+                margin: 30px auto;
+            }
+
+            .paper p::first-line {
+                font-size: 22px;
+            }
+
+            .envelope {
+                max-width: 300px;
+                width: 80vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img
+        onclick="next()"
+        src="source/first_frame.gif"
+        alt="An animation of an envelope"
+        class="envelope"
+        id="envelope"
+    />
+
+    <div class="paper" id="paper">
+        <p>
+            Happy 1st Anniversary love!<br /><br />
+
+            I never imagined that we last this long, I never thought that someone will actually stay with me for a long time except for my mom HAHHAHAHAHA.
+            At first, I was scared to tell you that I like you because I was afraid that you might not like me since you like my best friend that time. I still
+            remember our first and most awkward meet. I still remember how obsessed you are with him that time, I never really wanted to confess my feelings for
+            you, I never really wanted you to know that I fell in love with you the moment I saw you. I was embarrassed because you guys waited hours for us
+            because of me.<br /><br />
+
+            I will never forget all the things that you've done for me. I will never forget how nice you treated me when I can't forget my ex. You changed my
+            whole life from being a total loser to a student who never ran out of energy coding and programming websites because of you. You gave me all the
+            love and attention I needed. You never failed to reassure me, you never failed to show me how much you love me, you never failed to love me until
+            this day.<br /><br />
+
+            I still remember my first day going into your house, meeting your parents and your siblings. I still fondly remember our memories like the first
+            swimming vacation with you and your family. I love you Angelica, so much. I love you so much more than myself, I can't even imagine my life
+            without you.<br /><br />
+
+            I'm scared because one day you might fall in love with another man who's better than me in any aspect. I'm afraid of you finding someone because I can't
+            make you happy enough. I'm afraid that one day, you'll look for a new man to love you because I failed to show you how much I love you.<br /><br />
+
+            I know I'm not good at expressing my feelings but just know that I'm always trying my best for you, Angelica ko. I love you so much, madam sungitt >.<br /><br />
+
+            Again, Happy 1st Anniversary mahallll, I love you so muchhhhh pooooo!! :p More memories and away to comeee HAHAHAHAHAAH<br /><br />
+
+            - Seb.
+        </p>
+    </div>
+
+    <script>
+        function next() {
+            const gif = document.getElementById('envelope');
+            const paper = document.getElementById('paper');
+            const audio = new Audio('source/sombr.mp3');
+            audio.currentTime = 79;
+
+            gif.src = 'source/FINAL-2nd.gif';
+
+            setTimeout(() => {
+                gif.style.display = 'none';
+                paper.classList.add('show');
+                audio.play();
+                document.body.style.background = 'linear-gradient(90deg, #6FE6FC, #FFC0CB)';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
