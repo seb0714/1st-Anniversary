@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Happy 1st Anniversary</title>
+    <link rel="shortcut icon" href="source/Love.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap');
 
@@ -150,8 +151,11 @@
             const gif = document.getElementById('envelope');
             const paper = document.getElementById('paper');
             const audio = new Audio('source/sombr.mp3');
+            const vfx = new Audio('source/animation-142973.mp3');
             const head = document.getElementById('head');
             audio.currentTime = 79;
+
+            vfx.play();
 
             gif.src = 'source/FINAL-2nd.gif';
 
